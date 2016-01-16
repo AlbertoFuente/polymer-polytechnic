@@ -1,0 +1,21 @@
+{
+    "name": "polymer-polytehcnic",
+    "authors": [
+        "AlbertoFuente <alberto.delafuente.adesis@gmail.com>"
+    ],
+    "description": "polymer map element",
+    "main": "index.html",
+    "moduleType": [],
+    "license": "MIT",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "google-map": "GoogleWebComponents/google-map#~1.1.8"
+    }
+}
