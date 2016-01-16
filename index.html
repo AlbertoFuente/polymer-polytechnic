@@ -10,6 +10,12 @@
         height: 100%;
         margin: 0;
     }
+    paper-card {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      z-index: 1;
+    }
     </style>
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
@@ -21,20 +27,38 @@
     <link rel="import" href="bower_components/google-map/google-map-point.html">
     <link rel="import" href="bower_components/google-map/google-map-poly.html">
     <link rel="import" href="bower_components/google-map/google-map-search.html">
+
+    <link rel="import" href="bower_components/iron-icon/iron-icon.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/paper-item/paper-icon-item.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-card/paper-card.html">
 </head>
 <body unresolved>
-  <google-map latitude="37.779" longitude="-122.3892" zoom="13" disable-default-ui>
-    ...
-  </google-map>
-  <google-map-directions
-      start-address="San Francisco"
-      end-address="Mountain View">
-  </google-map-directions>
-  <script>
-      var gMap = document.querySelector('google-map');
-      gMap.addEventListener('api-load', function(e) {
-        document.querySelector('google-map-directions').map = this.map;
-      });
-  </script>
+    <template is="dom-bind">
+
+    <google-map map="{{map}}" latitude="37.779" longitude="-122.3892"
+        disable-default-ui zoom="13">
+      <google-map-marker latitude="37.779" longitude="-122.3892"
+          title="Go Giants!" draggable="true"></google-map-marker>
+    </google-map>
+
+    <google-map-directions map="{{map}}"
+        start-address="{{start}}"
+        end-address="{{end}}"></google-map-directions>
+
+    <paper-card elevation="2">
+      <paper-icon-item>
+        <iron-icon icon="search" item-icon></iron-icon>
+        <paper-input label="Start address" value="{{start}}">
+      </paper-icon-item>
+      <paper-icon-item>
+        <iron-icon icon="search" item-icon></iron-icon>
+        <paper-input label="End address" value="{{end}}">
+      </paper-icon-item>
+    </paper-card>
+
+    </template>
 </body>
 </html>
