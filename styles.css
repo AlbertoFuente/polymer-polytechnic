@@ -1,9 +1,14 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Noto', sans-serif;
+}
 paper-icon-button {
   margin-left: 10px;
   margin-right: 10px;
 }
 paper-drawer-panel {
-  --paper-drawer-panel-right-drawer-container: {
+    display: none;
+  --paper-drawer-panel-left-drawer-container: {
     background-color: white;
   };
 }
