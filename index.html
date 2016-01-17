@@ -9,28 +9,38 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="/bower_components/polymer/polymer.html">
 
     <link rel="import" href="/bower_components/paper-header-panel/paper-header-panel.html">
     <link rel="import" href="/bower_components/paper-toolbar/paper-toolbar.html">
     <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
 
+    <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+
+    <link rel="import" href="/bower_components/iron-icon/iron-icon.html">
     <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
-    <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="/bower_components/paper-item/paper-item.html">
+    <link rel="import" href="/bower_components/paper-item/paper-icon-item.html">
+    <link rel="import" href="/bower_components/paper-input/paper-input.html">
+    <link rel="import" href="/bower_components/paper-card/paper-card.html">
+    <link rel="import" href="/bower_components/paper-drawer-panel/paper-drawer-panel.html">
 
     <link rel="stylesheet" href="styles.css" type="text/css">
-
 </head>
-<body>
-  <paper-header-panel class="flex">
-    <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
-    <paper-toolbar>
-      <div>Polymer Polytechnic Madrid CodeLabs</div>
-    </paper-toolbar>
-  </paper-header-panel>
+<body unresolved>
+<dom-module id="polymer-polytechnic-home">
+    <paper-header-panel class="flex">
+        <paper-toolbar>
+          <paper-icon-button id="navicon" icon="menu" on-click="toggleDrawerPanel"></paper-icon-button>
+          <div>Polymer Polytechnic CodeLabs - Madrid</div>
+        </paper-toolbar>
+    </paper-header-panel>
 
-  <paper-drawer-panel right-drawer>
-      <div drawer>CodeLabs</div>
-      <div main> Main panel... </div>
-  </paper-drawer-panel>
+      <paper-drawer-panel left-drawer id="drawerPanel">
+        <div drawer> Drawer panel... </div>
+      </paper-drawer-panel>
+ </dom-module>
+
+ <script src="script.js"></script>
 </body>
 </html>
