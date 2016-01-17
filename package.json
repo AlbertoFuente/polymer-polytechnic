@@ -1,0 +1,15 @@
+{
+    "name": "polymer-polytehcnic",
+    "version": "1.0.0",
+    "description": "Polymer Polytechnic Madrid CodeLabs",
+    "main": "index.html",
+    "scripts": {
+        "start": "npm run lite",
+        "lite": "lite-server"
+    },
+    "author": "Alberto de la Fuente",
+    "license": "MIT",
+    "devDependencies": {
+        "lite-server": "^1.3.2"
+    }
+}

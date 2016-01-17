@@ -24,6 +24,11 @@
     "paper-input": "PolymerElements/paper-input#~1.1.5",
     "paper-card": "PolymerElements/paper-card#~1.0.9",
     "iron-elements": "PolymerElements/iron-elements#~1.0.7",
-    "paper-tabs": "PolymerElements/paper-tabs#~1.2.5"
+    "paper-tabs": "PolymerElements/paper-tabs#~1.2.5",
+    "paper-header-panel": "PolymerElements/paper-header-panel#~1.1.2",
+    "paper-toolbar": "PolymerElements/paper-toolbar#~1.1.2",
+    "paper-drawer-panel": "PolymerElements/paper-drawer-panel#~1.0.6",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#~1.2.2",
+    "font-roboto": "PolymerElements/font-roboto#~1.0.1"
   }
 }
